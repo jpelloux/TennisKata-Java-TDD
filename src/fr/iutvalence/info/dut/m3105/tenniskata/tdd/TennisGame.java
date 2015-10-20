@@ -4,29 +4,35 @@ public class TennisGame
 	public static final String LOVE_FIFTEEN = "love-fifteen";
 	public static final String FIFTEEN_LOVE = "fifteen-love";
 	public static final String LOVE_ALL = "love-all";
+	public static final String FIFTEEN_ALL = "fifteen-all";
 	
+	private int serverScore;
+	private int receiverScore;
 	
-	private String score;
 	
 	public TennisGame()
 	{
-		setScore(LOVE_ALL);
+		this.serverScore = 0;
+		this.receiverScore = 0;
 	}
 	
-	public String getScore() {
-		return this.score;
-	}
-
 	public void serverScores() {
-		setScore(FIFTEEN_LOVE);
+		this.serverScore++;
 	}
 
 	public void receiverScores() {
-		setScore(LOVE_FIFTEEN);
+		this.receiverScore++;
+	}
+	
+	public String getScore() {
+		if(serverScore == 0 && receiverScore == 0)
+			return LOVE_ALL;
+		if(serverScore == 1 && receiverScore == 0)
+			return FIFTEEN_LOVE;
+		if(serverScore == 0 && receiverScore == 1)
+			return LOVE_FIFTEEN;
+		return FIFTEEN_ALL;
 	}
 
-	private void setScore(String score) {
-		this.score = score;
-	}
 
 }
