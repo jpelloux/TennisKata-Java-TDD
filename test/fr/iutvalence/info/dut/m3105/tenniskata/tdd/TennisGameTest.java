@@ -9,6 +9,11 @@ import org.junit.Test;
 
 public class TennisGameTest
 {
+	public static final String LOVE_FIFTEEN = "love-fifteen";
+	public static final String FIFTEEN_LOVE = "fifteen-love";
+	public static final String LOVE_ALL = "love-all";
+	public static final String FIFTEEN_ALL = "fifteen-all";
+
 	private TennisGame gameDummy;
 	
 	@Before
@@ -20,21 +25,21 @@ public class TennisGameTest
 	@Test
 	public void aNewGameScoreShouldBeLoveAll()
 	{
-		assertEquals(gameDummy.getScore(), TennisGame.LOVE_ALL);
+		assertEquals(gameDummy.getScore(), LOVE_ALL);
 	}
 
 	@Test
 	public void ifTheServerScoresScoreShouldBeFifteenLove()
 	{
 		gameDummy.serverScores();
-		assertEquals(gameDummy.getScore(), TennisGame.FIFTEEN_LOVE);
+		assertEquals(gameDummy.getScore(), FIFTEEN_LOVE);
 	}
 	
 	@Test
 	public void ifTheReceiverScoresScoreShouldBeLoveFifteen()
 	{
 		gameDummy.receiverScores();
-		assertEquals(gameDummy.getScore(), TennisGame.LOVE_FIFTEEN);
+		assertEquals(gameDummy.getScore(), LOVE_FIFTEEN);
 	}
 	
 	@Test
@@ -42,11 +47,11 @@ public class TennisGameTest
 	{
 		gameDummy.serverScores();
 		gameDummy.receiverScores();
-		assertEquals(gameDummy.getScore(), TennisGame.FIFTEEN_ALL);
+		assertEquals(gameDummy.getScore(), FIFTEEN_ALL);
 		this.before();
 		gameDummy.receiverScores();
 		gameDummy.serverScores();
-		assertEquals(gameDummy.getScore(), TennisGame.FIFTEEN_ALL);
+		assertEquals(gameDummy.getScore(), FIFTEEN_ALL);
 	}
 	
 
