@@ -29,5 +29,12 @@ public class TennisGameTest
 		gameDummy.serverScores();
 		assertEquals(gameDummy.getScore(), "fifteen-love");
 	}
+	
+	@Test
+	public void ifTheReceiverScoresScoreShouldBeLoveFifteen()
+	{
+		gameDummy.receiverScores();
+		assertEquals(gameDummy.getScore(), "love-fifteen");
+	}
 
 }
