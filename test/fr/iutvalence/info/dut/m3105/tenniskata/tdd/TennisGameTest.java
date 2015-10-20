@@ -1,6 +1,8 @@
 package fr.iutvalence.info.dut.m3105.tenniskata.tdd;
 
 
+import static org.junit.Assert.*;
+
 import org.junit.Assert;
 import org.junit.Test;
 
