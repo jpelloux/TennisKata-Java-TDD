@@ -2,7 +2,7 @@ package fr.iutvalence.info.dut.m3105.tenniskata.tdd;
 public class TennisGame
 {
 
-	public Object getScore() {
+	public String getScore() {
 		return "love-all";
 	}
 

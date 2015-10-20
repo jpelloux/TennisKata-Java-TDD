@@ -9,7 +9,7 @@ import org.junit.Test;
 public class TennisGameTest
 {
 	@Test
-	public void aNewGameShouldBeLoveAll()
+	public void aNewGameScoreShouldBeLoveAll()
 	{
 		TennisGame gameDummy = new TennisGame();
 		assertEquals(gameDummy.getScore(), "love-all");
