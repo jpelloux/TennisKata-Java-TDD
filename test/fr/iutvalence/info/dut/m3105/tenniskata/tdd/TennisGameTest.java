@@ -58,7 +58,7 @@ public class TennisGameTest
 	}
 	
 	@Test
-	public void allScoresBeforeEqualityShouldWork()
+	public void allScoresBeforeEqualityAndEqualityShouldWork()
 	{
 		for (int serverScore = 0 ; serverScore < 4 ; serverScore++)
 		{
