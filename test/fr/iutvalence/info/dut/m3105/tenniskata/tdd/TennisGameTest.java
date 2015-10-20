@@ -15,4 +15,12 @@ public class TennisGameTest
 		assertEquals(gameDummy.getScore(), "love-all");
 	}
 
+	@Test
+	public void ifTheServingPlayerMarksScoreShouldBeFifteenLove()
+	{
+		TennisGame gameDummy = new TennisGame();
+		gameDummy.servingPlayerMarks();
+		assertEquals(gameDummy.getScore(), "fifteen-love");
+	}
+
 }
