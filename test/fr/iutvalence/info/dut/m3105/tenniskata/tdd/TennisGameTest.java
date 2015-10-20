@@ -20,21 +20,23 @@ public class TennisGameTest
 	@Test
 	public void aNewGameScoreShouldBeLoveAll()
 	{
-		assertEquals(gameDummy.getScore(), "love-all");
+		assertEquals(gameDummy.getScore(), TennisGame.LOVE_ALL);
 	}
 
 	@Test
 	public void ifTheServerScoresScoreShouldBeFifteenLove()
 	{
 		gameDummy.serverScores();
-		assertEquals(gameDummy.getScore(), "fifteen-love");
+		assertEquals(gameDummy.getScore(), TennisGame.FIFTEEN_LOVE);
 	}
 	
 	@Test
 	public void ifTheReceiverScoresScoreShouldBeLoveFifteen()
 	{
 		gameDummy.receiverScores();
-		assertEquals(gameDummy.getScore(), "love-fifteen");
+		assertEquals(gameDummy.getScore(), TennisGame.LOVE_FIFTEEN);
 	}
+	
+	
 
 }
