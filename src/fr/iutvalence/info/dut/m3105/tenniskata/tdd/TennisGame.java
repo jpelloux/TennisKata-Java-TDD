@@ -12,7 +12,7 @@ public class TennisGame
 		return this.score;
 	}
 
-	public void servingPlayerMarks() {
+	public void serverScores() {
 		this.score = "fifteen-love";
 	}
 

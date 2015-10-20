@@ -4,22 +4,29 @@ package fr.iutvalence.info.dut.m3105.tenniskata.tdd;
 import static org.junit.Assert.*;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 public class TennisGameTest
 {
+	private TennisGame gameDummy;
+	
+	@Before
+	public void before()
+	{
+		gameDummy = new TennisGame();
+	}
+	
 	@Test
 	public void aNewGameScoreShouldBeLoveAll()
 	{
-		TennisGame gameDummy = new TennisGame();
 		assertEquals(gameDummy.getScore(), "love-all");
 	}
 
 	@Test
-	public void ifTheServingPlayerMarksScoreShouldBeFifteenLove()
+	public void ifTheServerScoresScoreShouldBeFifteenLove()
 	{
-		TennisGame gameDummy = new TennisGame();
-		gameDummy.servingPlayerMarks();
+		gameDummy.serverScores();
 		assertEquals(gameDummy.getScore(), "fifteen-love");
 	}
 
