@@ -4,7 +4,7 @@ public class TennisGame
 	public static final String LOVE = "love";
 	public static final String FIFTEEN = "fifteen";
 	
-	private static final String[] SCORE_TO_STRING= {LOVE, FIFTEEN};
+	private static final String[] SCORE_TO_STRING= {LOVE, FIFTEEN, "thirty", "forty"};
 	
 	private int serverScore;
 	private int receiverScore;
@@ -25,6 +25,8 @@ public class TennisGame
 	}
 	
 	public String getScore() {
+		if (serverScore == receiverScore && serverScore == 3)
+			return "deuce";
 		if (serverScore == receiverScore)
 			return SCORE_TO_STRING[serverScore] + "-all";
 		return SCORE_TO_STRING[serverScore] + '-' + SCORE_TO_STRING[receiverScore];
