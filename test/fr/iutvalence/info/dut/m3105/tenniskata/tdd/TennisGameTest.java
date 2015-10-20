@@ -37,6 +37,17 @@ public class TennisGameTest
 		assertEquals(gameDummy.getScore(), TennisGame.LOVE_FIFTEEN);
 	}
 	
+	@Test
+	public void ifServerAndReceiverScoreOnceScoreShouldBeFifteenAll()
+	{
+		gameDummy.serverScores();
+		gameDummy.receiverScores();
+		assertEquals(gameDummy.getScore(), TennisGame.FIFTEEN_ALL);
+		this.before();
+		gameDummy.receiverScores();
+		gameDummy.serverScores();
+		assertEquals(gameDummy.getScore(), TennisGame.FIFTEEN_ALL);
+	}
 	
 
 }
